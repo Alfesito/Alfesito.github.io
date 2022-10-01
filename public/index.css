@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+body{
+  background-color: black;
+}
+
 .cover {
   height: 250px;
   background-image: url("./cabecera.jpg");
