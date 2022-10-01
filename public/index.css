@@ -24,6 +24,9 @@ html{
   color: crimson;
   margin-left: 3%;
 }
+.horarios{
+  height: 250px;
+}
 
 .foot {
   background-color: black;
