@@ -22,6 +22,7 @@ body{
 
 .calendario {
   background-color: black;
+  margin-top: 4px;
   
 }
 
@@ -32,8 +33,8 @@ body{
 
 }
 .horarios{
-  height: 720px;
-  width: 1280px;
+  height: 720pc;
+  width: 1280pc;
   background-color: black;
 }
 
