@@ -1,6 +1,65 @@
 <html> 
-  <head><h1>F1 con Alfesito</h1></head>
+  <head>
+    <title>F1 con Alfesito</title>
+    <link href="./index.css" rel="stylesheet">
+
+  </head>
   <body>
+    <h1>F1 con Alfesito</h1>
     <iframe src="//f1livegp.me/f1/live.php" name="frame" scrolling="no" frameborder="no" allow="fullscreen" align="center" height = "500px" width = "80%"></iframe>
+
+    
+    <div class="live-leaderboard-table-wrapper">
+      <h2>Tiempos</h2>
+      <ul class="list-label misc--label f1-color--white f1-uppercase">
+          <li class="label--position">Pos</li>
+          <li class="label--driver">Driver</li>
+          <li class="label-container float-right">
+              <span class="label--timing">Gap</span>
+              <span class="label--tyre">Tyre</span>
+              <span class="label--pit-tyre-count"></span>
+          </li>
+      </ul>
+      <ul class="driver-list"></ul>
+      <script type="text/template" id="leaderboard-item-template">
+          <@ var items = items;
+          _.each(items, function(item, key, list) {
+          item.Timing = item.Timing != undefined ? item.Timing : " - - ";
+          @>
+          <li class="f1-color--white" data-racing-number="<@= item.labelRacingNumber @>" data-position="<@= item.Line @>">
+              <div class="animation-wrapper">
+                  <span class="live-leaderboard--rank f1-right f1-bold--xs"><@=item.Line @></span>
+                  <span class="live-leaderboard--team-color-icon <@= item.labelTeamBgColorClass @>" style="<@= item.labelTeamColorText @>"></span>
+                  <span class="live-leaderboard--driver-details f1--xs">
+                      <@ if(item.NameFormat && item.NameFormat === "LastNameIsPrimary") { @>
+                          <span class="driver-lastname-primary">
+                      <@ } @>
+                      <span class="d-none d-md-inline f1-capitalize live-leaderboard--first-name"><@=item.labelFirstName @></span>
+                      <span class="d-none d-md-inline f1-uppercase f1-bold--xs live-leaderboard--last-name"><@= item.labelLastName @></span>
+                      <span class="d-md-none f1-uppercase f1-bold--xs live-leaderboard--short-name"><@= item.shortName @></span>
+                      <@ if(item.NameFormat && item.NameFormat === "LastNameIsPrimary") { @>
+                          </span>
+                      <@ } @>
+                  </span>
+                  <span class="live-leaderboard--team-name d-none d-xl-inline f1-capitalize misc--label f1-color--gray4"><@= item.labelTeamName @></span>
+                  <span class="live-leaderboard-data-container float-right misc--label f1-uppercase">
+                      <span class="live-leaderboard--time f1-center f1-label f1-bg--gray6" data-leaderboard-time="<@= item.Timing @>"><@= item.Timing @></span>
+                         <span class="live-leaderboard--tyres" data-current-tyre="">
+                            <img src="/etc/designs/fom-website/images/empty.png" class="tyre" />
+                         </span>
+                      <span class="live-leaderboard--tyre-pit-count" data-pit-tyre-count=""> - - </span>
+                  </span>
+
+              </div>
+          </li>
+          <@ }); @>
+      </script>
+  </div>
+
+    <div>
+      <h2>Calendario y horarios</h2>
+      <img class="img_calendario" src="./public/calendario2022.jpeg" alt=img_calendario/>
+      <a title="" href="" ></a>
+    </div>
   </body>
 </html>
