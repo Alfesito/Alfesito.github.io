@@ -1,55 +1,58 @@
-<html> 
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<html>
 
-    <!-- Import bootstrap -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    >
-    <!-- Import tipografía -->
-    <link rel="preconnect" href="https://fonts.gstatic.com"> 
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
-    <!-- Import the webpage's stylesheet -->
-    <link href="./public/index.css" rel="stylesheet">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="icon" href="./public/icon.png">
-    <title>F1 con Alfesito</title>
-  </head>
+  <!-- Import bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Import tipografía -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+  <!-- Import the webpage's stylesheet -->
+  <link href="./public/index.css" rel="stylesheet">
 
-  <body>
-    <div class="cover d-flex justify-content-center align-items-center flex-column">
-      <h1>F1 con Alfesito</h1>
-      <p>
-        Streaming F1 en inglés
-      </p>
-    </div>
-    <div>
-       <!-- src="https://f1livegp.me/f1/live.php"  -->
-       <!-- src="https://f1livegp.me/f1/f1-to-change-finances-money.php" No ads -->
-      <iframe class="video d-flex justify-content-center align-items-center flex-column" 
-        src="https://f1livegp.me/f1/live.php"
-        name="frame" importance="high" referrerpolicy="strict-origin-when-cross-origin"
-        scrolling="no" frameborder="no" allow="fullscreen" seamless="true"
-        height = "720px" width = "100%"></iframe>
+  <link rel="icon" href="./public/icon.png">
+  <title>F1 con Alfesito</title>
+</head>
 
-      <iframe scr="https://alfesito.github.io/scripts/framefilter.php?furl=https://f1livegp.me/f1/live.php" width=1000 height=500>
-        If you can see this, your browser doesn't 
-        understand IFRAMES. However, we'll still 
-        <a href="https://f1livegp.me/f1/live.php">link</a> 
-        you to the page.
-      </iframe>
+<body>
+  <div class="cover d-flex justify-content-center align-items-center flex-column">
+    <h1>F1 con Alfesito</h1>
+    <p>
+      Streaming F1 en inglés
+    </p>
+  </div>
+  <div>
+    <!-- src="https://f1livegp.me/f1/live.php"  -->
+    <!-- src="https://f1livegp.me/f1/f1-to-change-finances-money.php" -> No ads -->
+    <iframe class="video d-flex justify-content-center align-items-center flex-column"
+      src="https://f1livegp.me/f1/live.php" name="frame" importance="high"
+      referrerpolicy="strict-origin-when-cross-origin" scrolling="no" frameborder="no" allow="fullscreen"
+      seamless="true" height="720px" width="100%"></iframe>
+
+    <iframe class="pruebavideo d-flex justify-content-center align-items-center flex-column"
+      scr="https://alfesito.github.io/scripts/framefilter.php?furl=https://f1livegp.me/f1/live.php" width=1000
+      height=500>
+      If you can see this, your browser doesn't
+      understand IFRAMES. However, we'll still
+      <iframe class="video d-flex justify-content-center align-items-center flex-column"
+        src="https://f1livegp.me/f1/live.php" name="frame" importance="high"
+        referrerpolicy="strict-origin-when-cross-origin" scrolling="no" frameborder="no" allow="fullscreen"
+        seamless="true" height="720px" width="100%"></iframe>
+      you to the page.
+    </iframe>
     <!-- </div>
     <div class="calendario">
       <h2 class="titulo_calendario">Calendario y horarios</h2>
       <a title="horarios" href="https://soymotor.com/calendario/2022" ><img class="img_calendario d-flex justify-content-center align-items-center flex-column" src="./public/calendario2022.jpeg" alt=img_calendario/></a>
     </div> -->
-  </body>
-  <footer class="foot d-flex justify-content-center align-items-center flex-column">
-    <p class="foot_text">Si tiene algún problema o no puede ver el stream, mande un correo a: <b>alfesitoo@gmail.com</b></p>
-  </footer>
+</body>
+<footer class="foot d-flex justify-content-center align-items-center flex-column">
+  <p class="foot_text">Si tiene algún problema o no puede ver el stream, mande un correo a: <b>alfesitoo@gmail.com</b>
+  </p>
+</footer>
+
 </html>
