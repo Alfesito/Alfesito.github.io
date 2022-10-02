@@ -4,7 +4,7 @@
 $furl=trim($_GET["furl"]);
 $raw = file_get_contents($furl);
 
-$mydomain="https://alfesito.github.io/index.html";
+$mydomain="https://alfesito.github.io/";
 
 //Kill anoying popups.
 $raw=str_replace("alert(","isNull(",$raw);
