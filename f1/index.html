@@ -23,10 +23,8 @@
     const iframeUrl = async () => {
       const url1 = 'https://f1livegp.me/f1/live.php';
       const url2 = 'https://techclips.net/clip/r1.html';
-
       const response1 = await fetch(url1);
       const response2 = await fetch(url2);
-
       if (response1.status === 200) {
         console.log(response1);
         return url1;
@@ -36,7 +34,6 @@
       } else {
         console.log('No funciona nada')
       }
-
     }
   </script>
   <div class="cover d-flex justify-content-center align-items-center flex-column">
@@ -49,12 +46,12 @@
   <!-- https://f1livegp.me/f1/live.php -->
   <div name="video d-flex justify-content-center align-items-center flex-column">
     <p>Señal 1</p>
-    <iframe src="https://techclips.net/clip/r1.html" onclick="()=>iframeUrl()" 
+    <iframe src="https://techclips.net/clip/r1.html"
       name="frame" importance="high" sandbox="allow-same-origin allow-scripts"
       referrerpolicy="strict-origin-when-cross-origin" scrolling="no"
       frameborder="no" allow="fullscreen" seamless="true" height="720px" width="100%"></iframe>
     <p>Señal 2</p>
-    <iframe src="https://f1livegp.me/f1/live.php" onclick="()=>iframeUrl()" 
+    <iframe src="https://f1livegp.me/f1/live.php"
       name="frame" importance="high" sandbox="allow-same-origin allow-scripts" 
       referrerpolicy="strict-origin-when-cross-origin" scrolling="no"
       frameborder="no" allow="fullscreen" seamless="true" height="720px" width="100%"></iframe>
