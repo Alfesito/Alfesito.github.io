@@ -47,5 +47,9 @@ body{
 
 .video{
   margin-top: 3%;
-  color: white;
+}
+.señal{
+  color: red;
+  margin-left: 3%;
+
 }
