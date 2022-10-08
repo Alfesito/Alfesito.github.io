@@ -19,27 +19,46 @@
 </head>
 
 <body>
+  <script type="text/javascript">
+    const iframeUrl = async () => {
+      const url1 = 'https://f1livegp.me/f1/live.php';
+      const url2 = 'https://techclips.net/clip/r1.html';
+
+      const response1 = await fetch(url1);
+      const response2 = await fetch(url2);
+
+      if (response1.status === 200) {
+        console.log(response1);
+        return url1;
+      } if (response1.status === 200) {
+        console.log(response2);
+        return url2;
+      } else {
+        console.log('No funciona nada')
+      }
+
+    }
+  </script>
   <div class="cover d-flex justify-content-center align-items-center flex-column">
     <h1>F1 con Alfesito</h1>
     <p>
       Streaming F1 en inglés
     </p>
   </div>
-  <div name="video">
-    <!-- https://techclips.net/clip/r1.html -->
-    <!-- https://f1livegp.me/f1/live.php -->
-    <iframe class="video d-flex justify-content-center align-items-center flex-column"
-      src="https://techclips.net/clip/r1.html" 
+  <!-- https://techclips.net/clip/r1.html -->
+  <!-- https://f1livegp.me/f1/live.php -->
+  <div name="video d-flex justify-content-center align-items-center flex-column">
+    <p>Señal 1</p>
+    <iframe src="https://techclips.net/clip/r1.html" onclick="()=>iframeUrl()" 
       name="frame" importance="high" sandbox="allow-same-origin allow-scripts"
-      referrerpolicy="strict-origin-when-cross-origin" scrolling="no" frameborder="no" allow="fullscreen"
-      seamless="true" height="720px" width="100%"></iframe>
-
+      referrerpolicy="strict-origin-when-cross-origin" scrolling="no"
+      frameborder="no" allow="fullscreen" seamless="true" height="720px" width="100%"></iframe>
+    <p>Señal 2</p>
+    <iframe src="https://f1livegp.me/f1/live.php" onclick="()=>iframeUrl()" 
+      name="frame" importance="high" sandbox="allow-same-origin allow-scripts" 
+      referrerpolicy="strict-origin-when-cross-origin" scrolling="no"
+      frameborder="no" allow="fullscreen" seamless="true" height="720px" width="100%"></iframe>
     </iframe>
-    <!-- </div>
-    <div class="calendario">
-      <h2 class="titulo_calendario">Calendario y horarios</h2>
-      <a title="horarios" href="https://soymotor.com/calendario/2022" ><img class="img_calendario d-flex justify-content-center align-items-center flex-column" src="./public/calendario2022.jpeg" alt=img_calendario/></a>
-    </div> -->
 </body>
 <footer class="foot d-flex justify-content-center align-items-center flex-column">
   <p class="foot_text">Si tiene algún problema o no puede ver el stream, mande un correo a: <b>alfesitoo@gmail.com</b>
