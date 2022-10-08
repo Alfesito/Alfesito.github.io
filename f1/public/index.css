@@ -21,16 +21,7 @@ body{
 }
 
 .calendario {
-  background-color: black;
-  margin-top: 4px;
-  
-}
-
-.titulo_calendario {
-  color: crimson;
-  margin-left: 3%;
-  background-color: black;
-
+  color: red;
 }
 .horarios{
   margin: 1px;
